@@ -2,7 +2,7 @@
 
 **WireScan** is very small library for scanning I2C bus.
 It can be used to display devices currently connected to the bus, which
-can be helpful to do dugin **setup()**. 
+can be helpful to do dugin *setup()*. 
 
 License: GPL3
 
@@ -21,41 +21,23 @@ that everything is connected correctly, etc...
 
 Usage with **Serial** library:
 
-  #include <Wire.h>
-  #include <WireScan.h>
+    #include <Wire.h>
+    #include <WireScan.h>
 
-  ...
-
-
-  void setup(void)
-  {
-     Serial.begin(9600);
-     Wire.begin();
-
-     WireScan.scan(Serial);
-
-  }
-
-  ...
+    ...
 
 
-Usage with **SoftwareSerial** library:
+    void setup(void)
+    {
+       Serial.begin(9600);
+       Wire.begin();
 
+       WireScan.scan(Serial);
 
-   #include <SoftwareSerial.h>
-   #include <Wire.h>
-   #include <WireScan.h>
+    }
 
+    ...
 
-
-   void setup(void)
-   {
-      Serial.begin(9600);
-      Wire.begin();
-
-      WireScan.scan(Serial);
-
-   }
 
 
 This library has very small foot print and shouldnt really affect availablre memory for the scketch.
